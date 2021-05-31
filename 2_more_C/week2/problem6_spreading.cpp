@@ -48,7 +48,7 @@ int main(){
     int cnt = 0;
 
     queue< pair<int,int> > q;
-    for(int i=0; i< n; ++i)
+    for(int i=0; i< n; ++i){
         for(int j=0; j<n; ++j){
             if(a[i][j] == '@'){
                 // q.emplace(i,j);
@@ -56,13 +56,14 @@ int main(){
                 cnt += 1;
             }
         }
-            
+    }
     
     // bfs, queue
     vector<vector<int> > dir{
         {1,0},{-1,0},{0,1},{0,-1}};
 
     vector<vector<int>> visited(n, vector<int> (n,0));
+
     for(int i =0; i<m-1;++i){
         int L = q.size();
         // cout<<"cnt"<<cnt<<endl;
@@ -82,12 +83,12 @@ int main(){
                 visited[x][y] = 1;
                 cnt += 1;
                 q.emplace(x,y);
-            }
+            };
             // cout<<tmp.first<<tmp.second<<endl;
-        }
+        };
     };
 
-    cout<<cnt<<endl;
+    std::cout<<cnt<<endl;
 
     return 0;
 }
