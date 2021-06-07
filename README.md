@@ -3,5 +3,3 @@
 pku C/C++ class
 
 Punch card
-
-updating
