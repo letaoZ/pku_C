@@ -7,3 +7,5 @@ Punch card
 USE lz branch
 
 branch update
+
+pull tester
